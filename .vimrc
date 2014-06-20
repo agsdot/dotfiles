@@ -1,5 +1,3 @@
-set nocompatible 
-
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
   set nocompatible               " Be iMproved
@@ -16,8 +14,14 @@ call neobundle#begin(expand('/Users/agsdot/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
+
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
@@ -105,11 +109,13 @@ vnoremap ; :
 vnoremap : ;
 
 " Search and open buffer, files, recent
-nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>f :CtrlP<CR>
-nnoremap <leader>r :CtrlPMRUFiles<CR>
+" nnoremap <leader>b :CtrlPBuffer<CR>
+" nnoremap <leader>f :CtrlP<CR>
+" nnoremap <leader>r :CtrlPMRUFiles<CR>
 
 set laststatus=2          " always show status line
+
+set paste
 
 " Tabs
 set autoindent            " copy indent from previous line
@@ -118,3 +124,8 @@ set shiftwidth=2          " spaces for autoindenting
 set smarttab              " <BS> removes shiftwidth worth of spaces
 set softtabstop=2         " spaces for editing, e.g. <Tab> or <BS>
 set tabstop=2             " spaces for <Tab>
+
+" Unite bindings http://www.reinteractive.net/posts/166-awesome-vim-plugins
+nnoremap <silent> <Leader>r :Unite -buffer-name=recent -winheight=10 file_mru<cr>
+nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+nnoremap <Leader>f :Unite grep:.<cr>
