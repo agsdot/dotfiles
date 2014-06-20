@@ -103,3 +103,18 @@ nnoremap ; :
 nnoremap : ;
 vnoremap ; :
 vnoremap : ;
+
+" Search and open buffer, files, recent
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>r :CtrlPMRUFiles<CR>
+
+set laststatus=2          " always show status line
+
+" Tabs
+set autoindent            " copy indent from previous line
+set expandtab             " replace tabs with spaces
+set shiftwidth=2          " spaces for autoindenting
+set smarttab              " <BS> removes shiftwidth worth of spaces
+set softtabstop=2         " spaces for editing, e.g. <Tab> or <BS>
+set tabstop=2             " spaces for <Tab>
