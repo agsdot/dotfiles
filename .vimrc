@@ -1,4 +1,4 @@
-set nocompatible    
+set nocompatible 
 
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
@@ -57,7 +57,7 @@ set noeb vb t_vb=
 
 syntax on
 colorscheme Tomorrow-Night-Eighties
-"colorscheme Base16-flat    
+"colorscheme Base16-flat  
 "colorscheme distinguished
 
 " For nerdcommenter
@@ -97,3 +97,9 @@ set mouse=a
 " Open where I left off
 set viminfo='1000,\"1000,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+" Switch colon and semi-colon
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
