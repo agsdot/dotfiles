@@ -16,7 +16,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/vimproc.vim' " requires followup install
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/neosnippet.vim'
@@ -31,6 +31,16 @@ NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'dkprice/vim-easygrep'
 NeoBundle 'sjbach/lusty'
 NeoBundle 'yegappan/mru'
+NeoBundle 'myusuf3/numbers.vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'bitc/vim-bad-whitespace'
+
+" NeoBundle 'Valloric/YouCompleteMe' " requires followup install
+" NeoBundle 'ntpeters/vim-better-whitespace'
+" NeoBundle 'Lokaltog/vim-easymotion'
+" http://mirnazim.org/writings/vim-plugins-i-use/
+" NeoBundle 'Raimondi/delimitMate'
+" NeoBundle 'ervandew/supertab'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -61,15 +71,16 @@ set noeb vb t_vb=
 
 syntax on
 colorscheme Tomorrow-Night-Eighties
-"colorscheme Base16-flat  
+"colorscheme Base16-flat
 "colorscheme distinguished
 
 " For nerdcommenter
 filetype plugin on
 
-let mapleader = ","
+" For nerdtree
+let NERDTreeShowHidden=1
 
-map <C-n> :NERDTreeToggle<CR>
+let mapleader = ","
 
 set hidden
 
@@ -129,3 +140,8 @@ set tabstop=2             " spaces for <Tab>
 nnoremap <silent> <Leader>r :Unite -buffer-name=recent -winheight=10 file_mru<cr>
 nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
 nnoremap <Leader>f :Unite grep:.<cr>
+nnoremap <Leader>n :NERDTreeToggle<cr>
+nmap <leader>nf :NERDTreeFind<cr>
+
+map <leader>/ <plug>NERDCommenterToggle
+imap <leader>/ <Esc><plug>NERDCommenterTogglei
