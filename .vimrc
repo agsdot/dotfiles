@@ -128,6 +128,9 @@ set laststatus=2          " always show status line
 
 set paste
 
+" Clipboard sharing http://vim.wikia.com/wiki/Accessing_the_system_clipboard
+set clipboard=unnamed
+
 " Tabs
 set autoindent            " copy indent from previous line
 set expandtab             " replace tabs with spaces
