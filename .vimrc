@@ -145,3 +145,9 @@ nmap <leader>nf :NERDTreeFind<cr>
 
 map <leader>/ <plug>NERDCommenterToggle
 imap <leader>/ <Esc><plug>NERDCommenterTogglei
+
+" easier navigation between split windows
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
