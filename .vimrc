@@ -18,6 +18,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim' " requires followup install
 NeoBundle 'Shougo/neocomplcache.vim'
+"NeoBundle 'Shougo/neocomplete' " post +lua enabled install for vim
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -35,7 +36,8 @@ NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bitc/vim-bad-whitespace'
 
-" NeoBundle 'Valloric/YouCompleteMe' " requires followup install
+NeoBundle 'Valloric/YouCompleteMe' " requires followup install
+NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'ntpeters/vim-better-whitespace'
 " NeoBundle 'Lokaltog/vim-easymotion'
 " http://mirnazim.org/writings/vim-plugins-i-use/
@@ -154,3 +156,5 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
+
+set backspace=2 " make backspace work like most other apps
