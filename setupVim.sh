@@ -1,10 +1,11 @@
 #!/bin/bash
-
-# Download neobundle
+echo ""
+echo "Download neobundle"
 mkdir -p ~/.vim/bundle
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
-# Setup vimproc (allows Unite grep project find to work)
+echo ""
+echo "Setup vimproc (allows Unite grep project find to work)"
 git clone https://github.com/Shougo/vimproc.vim.git ~/.vim/bundle/vimproc.vim
 cd ~/.vim/bundle/vimproc.vim
 
@@ -13,3 +14,10 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   make -f make_unix.mak
 fi
+
+echo ""
+echo "Setup YouCompleteMe"
+git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+./install.sh
