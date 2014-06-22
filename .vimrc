@@ -17,27 +17,28 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim' " requires followup install
-NeoBundle 'Shougo/neocomplcache.vim'
+"NeoBundle 'Shougo/neocomplcache.vim'
 "NeoBundle 'Shougo/neocomplete' " post +lua enabled install for vim
 NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
+"NeoBundle 'Shougo/neosnippet.vim'
+"NeoBundle 'Shougo/neosnippet-snippets'
 
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'sheerun/vim-polyglot'
-NeoBundle 'dkprice/vim-easygrep'
+" NeoBundle 'dkprice/vim-easygrep'
 NeoBundle 'sjbach/lusty'
-NeoBundle 'yegappan/mru'
+"NeoBundle 'yegappan/mru'
 NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bitc/vim-bad-whitespace'
 
 NeoBundle 'Valloric/YouCompleteMe' " requires followup install
-NeoBundle 'SirVer/ultisnips'
+" NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'ntpeters/vim-better-whitespace'
 " NeoBundle 'Lokaltog/vim-easymotion'
 " http://mirnazim.org/writings/vim-plugins-i-use/
@@ -158,3 +159,5 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 
 set backspace=2 " make backspace work like most other apps
+
+let g:nerdtree_tabs_open_on_console_startup=1
