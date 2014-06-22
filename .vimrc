@@ -36,14 +36,18 @@ NeoBundle 'sjbach/lusty'
 NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bitc/vim-bad-whitespace'
+"NeoBundle 'drmingdrmer/xptemplate'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'terryma/vim-smooth-scroll'
 
 NeoBundle 'Valloric/YouCompleteMe' " requires followup install
 " NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'ntpeters/vim-better-whitespace'
 " NeoBundle 'Lokaltog/vim-easymotion'
 " http://mirnazim.org/writings/vim-plugins-i-use/
-" NeoBundle 'Raimondi/delimitMate'
+"NeoBundle 'Raimondi/delimitMate'
 " NeoBundle 'ervandew/supertab'
+NeoBundle 'jiangmiao/auto-pairs'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -161,3 +165,8 @@ nnoremap <C-L> <C-W>l
 set backspace=2 " make backspace work like most other apps
 
 let g:nerdtree_tabs_open_on_console_startup=1
+
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
