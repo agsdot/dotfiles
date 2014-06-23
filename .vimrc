@@ -39,6 +39,7 @@ NeoBundle 'bitc/vim-bad-whitespace'
 "NeoBundle 'drmingdrmer/xptemplate'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'terryma/vim-smooth-scroll'
+NeoBundle 'terryma/vim-expand-region'
 
 NeoBundle 'Valloric/YouCompleteMe' " requires followup install
 " NeoBundle 'SirVer/ultisnips'
