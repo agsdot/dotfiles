@@ -132,6 +132,8 @@ vnoremap : ;
 " nnoremap <leader>f :CtrlP<CR>
 " nnoremap <leader>r :CtrlPMRUFiles<CR>
 
+let g:ctrlp_show_hidden = 1
+
 set laststatus=2          " always show status line
 
 set paste
@@ -154,6 +156,7 @@ nnoremap <Leader>b :Unite -quick-match buffer<cr>
 nnoremap <Leader>f :Unite grep:.<cr>
 nnoremap <Leader>n :NERDTreeToggle<cr>
 nnoremap <leader>nf :NERDTreeFind<cr>
+nnoremap <leader>p :CtrlPMixed<cr>
 
 map <leader>/ <plug>NERDCommenterToggle
 imap <leader>/ <Esc><plug>NERDCommenterTogglei
