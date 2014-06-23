@@ -149,10 +149,11 @@ set tabstop=2             " spaces for <Tab>
 
 " Unite bindings http://www.reinteractive.net/posts/166-awesome-vim-plugins
 nnoremap <silent> <Leader>r :Unite -buffer-name=recent -winheight=10 file_mru<cr>
-nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+"nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
+nnoremap <Leader>b :Unite -quick-match buffer<cr>
 nnoremap <Leader>f :Unite grep:.<cr>
 nnoremap <Leader>n :NERDTreeToggle<cr>
-nmap <leader>nf :NERDTreeFind<cr>
+nnoremap <leader>nf :NERDTreeFind<cr>
 
 map <leader>/ <plug>NERDCommenterToggle
 imap <leader>/ <Esc><plug>NERDCommenterTogglei
