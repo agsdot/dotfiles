@@ -1,2 +1,8 @@
+# Vim related files
 bundle/
 .vim/.netrwhist
+
+# Emacs related files
+elpa/*
+projectile-bookmarks.eld
+
