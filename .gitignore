@@ -3,6 +3,6 @@ bundle/
 .vim/.netrwhist
 
 # Emacs related files
-elpa/*
+elpa/
 projectile-bookmarks.eld
 

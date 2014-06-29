@@ -1,3 +1,12 @@
 [submodule "emacs.d/custom/neotree"]
 	path = emacs.d/custom/neotree
 	url = git@github.com:jaypei/emacs-neotree.git
+[submodule "vim/bundle/neobundle.vim"]
+  path = vim/bundle/neobundle.vim
+  url = git@github.com:Shougo/neobundle.vim.git
+[submodule "vim/bundle/vimproc.vim"]
+  path = vim/bundle/vimproc.vim
+  url = git@github.com:Shougo/vimproc.vim.git
+[submodule "vim/bundle/YouCompleteMe"]
+  path = vim/bundle/YouCompleteMe
+  url = git@github.com:Valloric/YouCompleteMe.git
