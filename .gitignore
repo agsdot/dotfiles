@@ -1,6 +1,6 @@
 # Vim related files
 bundle/
-.vim/.netrwhist
+vim/.netrwhist
 
 # Emacs related files
 elpa/
