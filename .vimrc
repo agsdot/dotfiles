@@ -40,6 +40,7 @@ NeoBundle 'bitc/vim-bad-whitespace'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'bling/vim-airline'
 
 NeoBundle 'Valloric/YouCompleteMe' " requires followup install
 " NeoBundle 'SirVer/ultisnips'
@@ -175,3 +176,7 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+
+"let NERDTreeHijackNetrw=1
+
