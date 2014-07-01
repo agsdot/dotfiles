@@ -25,16 +25,14 @@
     projectile
     evil-nerd-commenter
     crosshairs
-    ;dirtree
     undo-tree
-    ;project-explorer
-    powerline
     ace-jump-mode
     rainbow-delimiters
-    paradox
 
     evil
     evil-leader
+    powerline-evil
+
     git-gutter
 
     web-mode
@@ -164,14 +162,6 @@
 ;; Dont display logo at startup
 (setq inhibit-startup-message t)
 
-;; Add powerline to replace default emacs bar
-(require 'powerline)
-(powerline-default-theme)
-(setq powerline-arrow-shape 'arrow)   ;; the default
-(setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
-(setq powerline-arrow-shape 'arrow14) ;; best for small fonts
-(setq powerline-default-theme nil)
-
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.gsp?\\'" . web-mode))
@@ -241,9 +231,14 @@
 (define-key evil-normal-state-map ";" 'evil-ex)
 (define-key evil-normal-state-map ":" 'smex)
 
+(require 'powerline-evil)
+(powerline-evil-vim-theme)
+;; (powerline-evil-center-color-theme)
+;; (powerline-evil-vim-color-theme)
+
 ;; flx-ido completion system, recommended by Projectile
 ;; http://www.swaroopch.com/2013/10/17/emacs-configuration-tutorial/
-;; whoa...yeah!!! 6/27/14, this makes projectile behave just like ctrlp in vim! yeah!!!
+;; whoa...yeah!!! 6/27/14, this makes projectile behave just like ctrlp in vim (with a working fuzzy search)! yeah!!!
 (require 'flx-ido)
 (flx-ido-mode 1)
 ;; change it if you have a fast processor.
