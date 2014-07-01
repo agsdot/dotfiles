@@ -18,7 +18,6 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/vimshell'
 
 NeoBundle 'bling/vim-airline'
 
