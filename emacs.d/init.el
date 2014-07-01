@@ -52,7 +52,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load-theme 'sanityinc-tomorrow-eighties t)
+;; (load-theme 'sanityinc-tomorrow-eighties t)
+(load "tomorrow-night-eighties-theme.el")
+(require 'tomorrow-night-eighties-theme)
 
 (line-number-mode t)
 (column-number-mode t)
