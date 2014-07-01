@@ -56,7 +56,6 @@
 
 (load-theme 'sanityinc-tomorrow-eighties t)
 
-;; Display line and column numbers in mode line.
 (line-number-mode t)
 (column-number-mode t)
 (global-linum-mode t)
@@ -73,8 +72,6 @@
 (evilnc-default-hotkeys)
 
 ;; enable sidebar file managers
-;(autoload 'dirtree "dirtree" "Add directory to tree view" t)
-;(require 'project-explorer)
 (require 'neotree)
 
 ;; enable seeing of git diffs
@@ -83,10 +80,6 @@
 
 ;; y/n instead of yes/no
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-;; (require 'no-easy-keys)
-;;(load "no-easy-keys.el")
-;;(no-easy-keys 0)
 
 ;; menu bar visibility
 (menu-bar-mode -1)
@@ -140,7 +133,6 @@
 (electric-pair-mode 1)
 (show-paren-mode 1)
 
-(setq-default tab-width 2)
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode)
 
@@ -153,6 +145,9 @@
 ;; (global-set-key (kbd "C-a") 'mark-whole-buffer)
 (global-set-key (kbd "C-c C-p") 'projectile-find-file)
 (global-set-key (kbd "C-c C-f") 'projectile-grep)
+
+(setq-default tab-width 2)
+(setq-default indent-tabs-mode nil)
 
 (require 'whitespace)
 (global-whitespace-mode)
@@ -176,12 +171,6 @@
 (setq powerline-arrow-shape 'curve)   ;; give your mode-line curves
 (setq powerline-arrow-shape 'arrow14) ;; best for small fonts
 (setq powerline-default-theme nil)
-
-;; http://stackoverflow.com/questions/2592095/how-do-i-create-an-empty-file-in-emacs
-;; (add-hook 'find-file-hooks 'assume-new-is-modified)
-;; (defun assume-new-is-modified ()
-;;   (when (not (file-exists-p (buffer-file-name)))
-;;     (set-buffer-modified-p t)))
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
@@ -259,12 +248,6 @@
 (flx-ido-mode 1)
 ;; change it if you have a fast processor.
 (setq flx-ido-threshhold 1000)
-
-;;; paradox - Package management with GitHub integration
-;;; https://github.com/Bruce-Connor/paradox
-;; (require 'paradox)
-;; automatically star packages I install on GitHub
-;; (setq paradox-automatically-star t)
 
 (add-hook 'after-init-hook 'global-company-mode)
 
