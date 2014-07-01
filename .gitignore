@@ -5,4 +5,4 @@ vim/.netrwhist
 # Emacs related files
 elpa/
 projectile-bookmarks.eld
-
+*.dat
