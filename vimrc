@@ -16,12 +16,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimproc.vim' " requires followup install
-"NeoBundle 'Shougo/neocomplcache.vim'
-"NeoBundle 'Shougo/neocomplete' " post +lua enabled install for vim
+NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/vimshell.vim'
-"NeoBundle 'Shougo/neosnippet.vim'
-"NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/vimshell'
+
+NeoBundle 'bling/vim-airline'
 
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
@@ -30,29 +29,12 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'sheerun/vim-polyglot'
-" NeoBundle 'dkprice/vim-easygrep'
-NeoBundle 'sjbach/lusty'
-"NeoBundle 'yegappan/mru'
 NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'bitc/vim-bad-whitespace'
-"NeoBundle 'drmingdrmer/xptemplate'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'bling/vim-airline'
-
-NeoBundle 'Valloric/YouCompleteMe' " requires followup install
-" NeoBundle 'SirVer/ultisnips'
-" NeoBundle 'ntpeters/vim-better-whitespace'
-" NeoBundle 'Lokaltog/vim-easymotion'
-" http://mirnazim.org/writings/vim-plugins-i-use/
-"NeoBundle 'Raimondi/delimitMate'
-" NeoBundle 'ervandew/supertab'
-NeoBundle 'jiangmiao/auto-pairs'
-
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
 " Required:
 call neobundle#end()
@@ -66,6 +48,13 @@ NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 "
 
+" Switch colon and semi-colon
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
+let mapleader = ","
 
 " turn ON line numbers
 set number
@@ -75,21 +64,26 @@ set expandtab
 set ts=2
 set sw=2
 
+" Tabs
+set autoindent            " copy indent from previous line
+set expandtab             " replace tabs with spaces
+set shiftwidth=2          " spaces for autoindenting
+set smarttab              " <BS> removes shiftwidth worth of spaces
+set softtabstop=2         " spaces for editing, e.g. <Tab> or <BS>
+set tabstop=2             " spaces for <Tab>
+
+" Automatic indentation
+set autoindent
+set smarttab
+
 " quiet pls
 set noeb vb t_vb=
 
 syntax on
 colorscheme Tomorrow-Night-Eighties
-"colorscheme Base16-flat
-"colorscheme distinguished
-
-" For nerdcommenter
-filetype plugin on
 
 " For nerdtree
 let NERDTreeShowHidden=1
-
-let mapleader = ","
 
 set hidden
 
@@ -98,10 +92,6 @@ set whichwrap+=<,>,h,l
 
 " Case insensitive matching.
 set ignorecase
-
-" Automatic indentation
-set autoindent
-set smarttab
 
 set showmatch
 
@@ -122,42 +112,20 @@ set mouse=a
 set viminfo='1000,\"1000,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-" Switch colon and semi-colon
-nnoremap ; :
-nnoremap : ;
-vnoremap ; :
-vnoremap : ;
-
-" Search and open buffer, files, recent
-" nnoremap <leader>b :CtrlPBuffer<CR>
-" nnoremap <leader>f :CtrlP<CR>
-" nnoremap <leader>r :CtrlPMRUFiles<CR>
-
 let g:ctrlp_show_hidden = 1
-
-set laststatus=2          " always show status line
 
 set paste
 
 " Clipboard sharing http://vim.wikia.com/wiki/Accessing_the_system_clipboard
 set clipboard=unnamed
 
-" Tabs
-set autoindent            " copy indent from previous line
-set expandtab             " replace tabs with spaces
-set shiftwidth=2          " spaces for autoindenting
-set smarttab              " <BS> removes shiftwidth worth of spaces
-set softtabstop=2         " spaces for editing, e.g. <Tab> or <BS>
-set tabstop=2             " spaces for <Tab>
-
 " Unite bindings http://www.reinteractive.net/posts/166-awesome-vim-plugins
 nnoremap <silent> <Leader>r :Unite -buffer-name=recent -winheight=10 file_mru<cr>
-"nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
 nnoremap <Leader>b :Unite -quick-match buffer<cr>
 nnoremap <Leader>f :Unite grep:.<cr>
 nnoremap <Leader>n :NERDTreeToggle<cr>
 nnoremap <leader>nf :NERDTreeFind<cr>
-nnoremap <leader>p :CtrlPMixed<cr>
+nnoremap <leader>p :CtrlP<cr>
 
 map <leader>/ <plug>NERDCommenterToggle
 imap <leader>/ <Esc><plug>NERDCommenterTogglei
@@ -176,7 +144,3 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
-
-
-"let NERDTreeHijackNetrw=1
-
