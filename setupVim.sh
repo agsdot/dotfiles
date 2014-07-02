@@ -15,12 +15,12 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   make -f make_unix.mak
 fi
 
-echo ""
-echo "Setup YouCompleteMe"
+#echo ""
+#echo "Setup YouCompleteMe"
 #git clone https://github.com/Valloric/YouCompleteMe ~/.vim/bundle/YouCompleteMe
-cd ~/dotfiles/vim/bundle/YouCompleteMe
+#cd ~/dotfiles/vim/bundle/YouCompleteMe
 #git submodule update --init --recursive
-./install.sh
+#./install.sh
 
 
 #Temp note: Manual git clone steps obviated by using git submodules step now
