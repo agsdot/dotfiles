@@ -8,6 +8,7 @@ Instructions, clone the project.
 - cd dotfiles  
 - git submodule update --init --remote (make sure that we are on the correct submodule branch)  
 - Run the makesymlinks.sh script  
+- Run the setupGitconfig.sh script  
 - Run the setupVim.sh script  
 
 http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/  

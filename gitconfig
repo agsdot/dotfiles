@@ -1,9 +1,0 @@
-[user]
-  name = Jonathan Lai
-  email = jonathanlai@eltux.net
-[alias]
-  co = checkout
-  st = status -bs
-[core]
-  excludesfile = ~/.gitignore_global
-
