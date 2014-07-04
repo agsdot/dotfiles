@@ -47,8 +47,9 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
-(add-to-list 'load-path "~/.emacs.d/custom")
-(add-to-list 'load-path "~/.emacs.d/custom/neotree")
+(let ((default-directory "~/.emacs.d/custom/"))
+  (normal-top-level-add-to-load-path '("."))
+  (normal-top-level-add-subdirs-to-load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -120,7 +121,7 @@
 ;; copy/paste with C-c and C-v and C-x, check out C-RET too
 (cua-mode)
 ;; cross platform copy paste
-(load "cross-platform-copy-paste.el")
+(require 'cross-platform-copy-paste)
 
 ;; From http://ergoemacs.org/emacs/emacs_best_redo_mode.html
 (require 'undo-tree)
@@ -218,7 +219,7 @@
        (t (setq unread-command-events (append unread-command-events
                           (list evt))))))))
 
-;; Press jj in rapid succession to escape 
+;; Press jj in rapid succession to escape
 ;; Whoa..two ways to do the same things, the above function and below with the key-chord-mode plugin
 (setq key-chord-two-keys-delay 0.2)
 ;; from http://bbbscarter.wordpress.com/category/coding/emacs/

@@ -37,3 +37,5 @@
    1)
   )
 
+
+(provide 'cross-platform-copy-paste)
