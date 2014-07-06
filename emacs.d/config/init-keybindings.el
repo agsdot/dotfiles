@@ -17,8 +17,23 @@
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 
+;; use alternative/faster utilities than grep if found
+;; outside utilities need to be installed in bash with homebrew or apt-get or the packages directly
+;; pt, ag, and ack...grep is built into all unix systems
+(cond ((executable-find "pt")
+        (require-package 'pt) ;; https://github.com/bling/pt.el
+        (defalias 'my-search-util 'projectile-pt))  ;; seems pretty fast (faster than ag? maybe...dunno), but it's written in Go!
+      ((executable-find "ag")
+        (require-package 'ag) ;; https://github.com/Wilfred/ag.el
+        (defalias 'my-search-util 'projectile-ag))  ;; on the website, it said faster than ack
+      ((executable-find "ack")
+        (require-package 'ack-and-a-half) ;; https://github.com/jhelwig/ack-and-a-half
+        (defalias 'my-search-util 'projectile-ack))  ;; faster than grep
+      ((executable-find "grep")
+        (defalias 'my-search-util 'projectile-grep)))
+
 (evil-leader/set-key
-  "f" 'projectile-grep
+  "f" 'my-search-util
   "p" 'projectile-find-file
   "r" 'recentf-open-files
   "b" 'buffer-menu
