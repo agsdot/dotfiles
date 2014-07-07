@@ -7,10 +7,7 @@
 
 (require-package 'crosshairs)
 (require-package 'rainbow-delimiters)
-
-(line-number-mode t)
-(column-number-mode t)
-(global-linum-mode t)
+(require-package 'smartparens)
 
 (line-number-mode t)
 (column-number-mode t)
@@ -22,8 +19,8 @@
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode)
 
-(electric-pair-mode 1)
-(show-paren-mode 1)
+(require 'smartparens-config)
+(smartparens-global-mode t)
 
 (require 'whitespace)
 (global-whitespace-mode)
