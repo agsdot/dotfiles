@@ -1,6 +1,7 @@
 (require-package 'company)
 (require-package 'evil-nerd-commenter)
 (require-package 'git-gutter)
+(require-package 'git-timemachine)
 (require-package 'groovy-mode)
 (require-package 'js2-mode)
 (require-package 'web-mode)
