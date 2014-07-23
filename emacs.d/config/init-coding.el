@@ -5,6 +5,7 @@
 (require-package 'groovy-mode)
 (require-package 'js2-mode)
 (require-package 'web-mode)
+(require-package 'vimrc-mode)
 
 ;; enable seeing of git diffs
 (require 'git-gutter)
@@ -23,6 +24,9 @@
 (add-to-list 'auto-mode-alist '("\.groovy$" . groovy-mode))
 (add-to-list 'auto-mode-alist '("\.gradle$" . groovy-mode))
 (add-to-list 'interpreter-mode-alist '("groovy" . groovy-mode))
+
+(require 'vimrc-mode)
+(add-to-list 'auto-mode-alist '(".vim\\(rc\\)?$" . vimrc-mode))
 
 (add-hook 'after-init-hook 'global-company-mode)
 
