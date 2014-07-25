@@ -19,5 +19,8 @@
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 
+(evil-set-initial-state 'magit-status-mode 'emacs)
+(evil-set-initial-state 'magit-log-edit-mode 'emacs)
+
 ;;;;;;;;;;
 (provide 'init-evil)

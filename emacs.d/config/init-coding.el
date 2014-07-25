@@ -1,5 +1,6 @@
 (require-package 'company)
 (require-package 'evil-nerd-commenter)
+(require-package 'magit)
 (require-package 'git-gutter)
 (require-package 'git-timemachine)
 (require-package 'groovy-mode)
