@@ -123,7 +123,7 @@ set clipboard=unnamed
 nnoremap <silent> <Leader>r :Unite -buffer-name=recent -winheight=10 file_mru<cr>
 nnoremap <Leader>b :Unite -quick-match buffer<cr>
 nnoremap <Leader>f :Unite grep:.<cr>
-nnoremap <Leader>n :NERDTreeToggle<cr>
+nnoremap <Leader>nt :NERDTreeToggle<cr>
 nnoremap <leader>nf :NERDTreeFind<cr>
 nnoremap <leader>p :CtrlP<cr>
 

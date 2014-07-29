@@ -33,11 +33,12 @@
         (defalias 'my-search-util 'projectile-grep)))
 
 (evil-leader/set-key
+  "b" 'buffer-menu
   "f" 'my-search-util
+  "nf" 'neotree-find
+  "nt" 'neotree-toggle
   "p" 'projectile-find-file
   "r" 'recentf-open-files
-  "b" 'buffer-menu
-  "n" 'neotree-toggle
   "/" 'evilnc-comment-or-uncomment-lines
 )
 
