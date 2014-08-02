@@ -40,6 +40,8 @@
   "p" 'projectile-find-file
   "r" 'recentf-open-files
   "/" 'evilnc-comment-or-uncomment-lines
+  "<down>" 'drag-stuff-down
+  "<up>" 'drag-stuff-up
 )
 
 (define-key evil-normal-state-map ":" 'smex)

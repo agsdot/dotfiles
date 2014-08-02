@@ -1,10 +1,11 @@
 (require-package 'company)
+(require-package 'drag-stuff)
 (require-package 'evil-nerd-commenter)
-(require-package 'magit)
 (require-package 'git-gutter)
 (require-package 'git-timemachine)
 (require-package 'groovy-mode)
 (require-package 'js2-mode)
+(require-package 'magit)
 (require-package 'web-mode)
 (require-package 'vimrc-mode)
 
@@ -30,6 +31,9 @@
 (add-to-list 'auto-mode-alist '(".vim\\(rc\\)?$" . vimrc-mode))
 
 (add-hook 'after-init-hook 'global-company-mode)
+
+(require 'drag-stuff)
+(drag-stuff-global-mode t)
 
 ;;;;;;;;;;
 (provide 'init-coding)
