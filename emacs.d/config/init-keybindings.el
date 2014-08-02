@@ -35,6 +35,7 @@
 (evil-leader/set-key
   "b" 'buffer-menu
   "f" 'my-search-util
+  "l" 'linum-relative-toggle
   "nf" 'neotree-find
   "nt" 'neotree-toggle
   "p" 'projectile-find-file

@@ -5,6 +5,7 @@
 (require-package 'git-timemachine)
 (require-package 'groovy-mode)
 (require-package 'js2-mode)
+(require-package 'linum-relative)
 (require-package 'magit)
 (require-package 'web-mode)
 (require-package 'vimrc-mode)
@@ -34,6 +35,8 @@
 
 (require 'drag-stuff)
 (drag-stuff-global-mode t)
+
+(require 'linum-relative)
 
 ;;;;;;;;;;
 (provide 'init-coding)
