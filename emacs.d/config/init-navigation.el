@@ -40,5 +40,13 @@
 ;; change it if you have a fast processor.
 (setq flx-ido-threshhold 1000)
 
+;; Save point position between sessions
+(require 'saveplace)
+;; Try to make emacsclient play nice with saveplace
+;; http://www.emacswiki.org/emacs/EmacsClient#toc35
+(setq server-visit-hook (quote (save-place-find-file-hook)))
+(setq-default save-place t)
+(setq save-place-file (expand-file-name ".places" user-emacs-directory))
+
 ;;;;;;;;;;
 (provide 'init-navigation)

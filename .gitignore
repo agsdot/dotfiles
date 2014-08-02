@@ -7,3 +7,4 @@ elpa/
 projectile-bookmarks.eld
 *.dat
 auto-save-list/
+*.places
