@@ -1,4 +1,5 @@
 (require-package 'undo-tree)
+(require-package 'hungry-delete)
 
 ;; Dont display logo at startup
 (setq inhibit-startup-message t)
@@ -51,6 +52,9 @@
 
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil) ;; seems to affect autocomplete modes
+
+(require 'hungry-delete)
+(global-hungry-delete-mode)
 
 ;;;;;;;;;;
 (provide 'init-basics)
