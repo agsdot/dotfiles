@@ -9,6 +9,7 @@
 (require-package 'magit)
 (require-package 'web-mode)
 (require-package 'vimrc-mode)
+(require-package 'linum-relative)
 
 ;; enable seeing of git diffs
 (require 'git-gutter)
