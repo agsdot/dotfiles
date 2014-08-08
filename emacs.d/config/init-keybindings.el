@@ -13,6 +13,9 @@
 (global-set-key (kbd "C-c C-p") 'projectile-find-file)
 (global-set-key (kbd "C-c C-f") 'projectile-grep)
 
+;; Shift <directional key> moves between windows
+(windmove-default-keybindings)
+
 ;; Vim style
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
