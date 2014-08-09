@@ -2,6 +2,7 @@
 (require-package 'ido)
 (require-package 'ido-vertical-mode)
 (require-package 'flx-ido)
+(require-package 'neotree)
 (require-package 'projectile)
 (require-package 'smex)
 
