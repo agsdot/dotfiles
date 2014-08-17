@@ -6,10 +6,10 @@
 (require-package 'groovy-mode)
 (require-package 'js2-mode)
 (require-package 'linum-relative)
+(require-package 'lua-mode)
 (require-package 'magit)
 (require-package 'web-mode)
 (require-package 'vimrc-mode)
-(require-package 'linum-relative)
 
 ;; enable seeing of git diffs
 (require 'git-gutter)
@@ -39,6 +39,12 @@
 (add-to-list 'auto-mode-alist '("\.groovy$" . groovy-mode))
 (add-to-list 'auto-mode-alist '("\.gradle$" . groovy-mode))
 (add-to-list 'interpreter-mode-alist '("groovy" . groovy-mode))
+
+;; https://immerrr.github.io/lua-mode/
+(require 'lua-mode)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
 
 (require 'vimrc-mode)
 (add-to-list 'auto-mode-alist '(".vim\\(rc\\)?$" . vimrc-mode))
