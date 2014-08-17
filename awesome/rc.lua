@@ -84,7 +84,7 @@ end
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
-   names = {"EDITOR", "WORK WEB", "WORK TERMINAL", "OTHER","OTHER", "OTHER","FAH","MEDIA", "PERSONAL"}
+   names = {"EDITOR", "WORK WEB", "WORK TERMINAL", "GIT","OTHER", "OTHER","FAH","MEDIA", "PERSONAL"}
 }
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
@@ -448,4 +448,27 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+-- }}}
+
+
+-- {{{ Build some functions to accomplish the README.md goals
+-- Detect the os, right now, this script will detect the OS Linux or not, the goal is to detect distro
+-- http://www.wellho.net/resources/ex.php4?item=u112/getos
+
+function getos()
+
+        -- Unix, Linux varients
+        fh,err = io.popen("uname 2>/dev/null","r")
+        if fh then
+                osname = fh:read()
+                end
+        if osname then return osname end
+
+        -- Add code for other operating systems here
+        return "unknown"
+end
+
+-- os = getos()
+-- print (os)
+
 -- }}}
