@@ -1,4 +1,5 @@
 (require-package 'evil)
+(require-package 'evil-matchit)
 (require-package 'powerline-evil)
 
 ;; vim navigation
@@ -14,6 +15,9 @@
 
 (require 'powerline-evil)
 (powerline-evil-vim-theme)
+
+(require 'evil-matchit)
+(global-evil-matchit-mode 1)
 
 ;;Make evil-mode up/down operate in screen lines instead of logical lines
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
