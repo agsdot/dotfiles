@@ -15,6 +15,9 @@
 ;; y/n instead of yes/no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; Don't automatically add newline to end of file
+(setq mode-require-final-newline nil)
+
 ;; C-x C-j opens dired with the cursor right on the file you're editing
 (require 'dired-x)
 

@@ -56,6 +56,9 @@ vnoremap : ;
 
 let mapleader = ","
 
+" Don't automatically add newline to end of file
+set binary noeol
+
 " turn ON line numbers
 set number
 
