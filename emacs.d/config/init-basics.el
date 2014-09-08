@@ -16,6 +16,10 @@
 ;; http://stackoverflow.com/a/803828/2741455
 (desktop-save-mode 1)
 
+;; How do I change the scratch message in Emacs?
+;; http://stackoverflow.com/a/1498292/2741455
+(setq initial-scratch-message ";; This is the Emacs Scratch Buffer")
+
 ;; y/n instead of yes/no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
