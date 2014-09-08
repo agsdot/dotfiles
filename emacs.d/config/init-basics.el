@@ -12,6 +12,10 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+;; Emacs: reopen buffers from last session on startup?
+;; http://stackoverflow.com/a/803828/2741455
+(desktop-save-mode 1)
+
 ;; y/n instead of yes/no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
