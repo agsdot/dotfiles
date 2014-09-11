@@ -16,6 +16,15 @@
 ;; http://stackoverflow.com/a/803828/2741455
 (desktop-save-mode 1)
 
+;; Closing all other buffers in Emacs
+;; http://stackoverflow.com/a/3417473/2741455
+(defun kill-other-buffers ()
+    "Kill all other buffers."
+    (interactive)
+    (mapc 'kill-buffer 
+          (delq (current-buffer) 
+                (remove-if-not 'buffer-file-name (buffer-list)))))
+
 ;; How do I change the scratch message in Emacs?
 ;; http://stackoverflow.com/a/1498292/2741455
 (setq initial-scratch-message ";; This is the Emacs Scratch Buffer")
