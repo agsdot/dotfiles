@@ -1,6 +1,7 @@
 (require-package 'evil)
 (require-package 'evil-matchit)
 (require-package 'powerline-evil)
+(require-package 'evil-jumper)
 
 ;; vim navigation
 (require 'evil)
@@ -12,6 +13,8 @@
 
 ; Make horizontal movement cross lines
 (setq-default evil-cross-lines t)
+
+(require 'evil-jumper)
 
 (require 'powerline-evil)
 (powerline-evil-vim-theme)
