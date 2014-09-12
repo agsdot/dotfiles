@@ -1,5 +1,14 @@
+(require-package 'f)
 (require-package 'undo-tree)
 (require-package 'hungry-delete)
+
+(require 'f)
+(after-load 'f
+  (unless (f-exists? "~/.emacs.d/.cache/")
+    (f-mkdir ".cache")))
+
+(defcustom dotemacs-cache-directory (concat user-emacs-directory ".cache/")
+  "The storage location for various persistent files.")
 
 ;; Dont display logo at startup
 (setq inhibit-startup-message t)
@@ -21,8 +30,8 @@
 (defun kill-other-buffers ()
     "Kill all other buffers."
     (interactive)
-    (mapc 'kill-buffer 
-          (delq (current-buffer) 
+    (mapc 'kill-buffer
+          (delq (current-buffer)
                 (remove-if-not 'buffer-file-name (buffer-list)))))
 
 ;; How do I change the scratch message in Emacs?
