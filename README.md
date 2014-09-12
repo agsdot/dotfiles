@@ -1,4 +1,4 @@
-Them dots, here's my setup so far for vim and emacs.  Heads up folks, emacs is setup for evil mode / modal editing. 
+Them dots, here's my setup so far for vim and emacs (7.4 and 24.3 respectively).  Heads up folks, emacs is setup for evil mode / modal editing. 
 
 Also, both vim and emacs are setup to use the ; semicolon instead of the : colon to get into a command mod. 
 
