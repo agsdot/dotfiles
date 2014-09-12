@@ -55,6 +55,10 @@
 (drag-stuff-global-mode t)
 
 (require 'linum-relative)
+;; http://stackoverflow.com/a/15310340/2741455
+;; How to set defcustom variable
+(after-load 'linum-relative
+  (setq linum-relative-current-symbol ""))
 
 ;;;;;;;;;;
 (provide 'init-coding)
