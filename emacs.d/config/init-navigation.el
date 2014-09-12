@@ -47,7 +47,7 @@
 ;; http://www.emacswiki.org/emacs/EmacsClient#toc35
 (setq server-visit-hook (quote (save-place-find-file-hook)))
 (setq-default save-place t)
-(setq save-place-file (expand-file-name ".places" user-emacs-directory))
+(setq save-place-file (expand-file-name ".cache/places" user-emacs-directory))
 
 ;;;;;;;;;;
 (provide 'init-navigation)
