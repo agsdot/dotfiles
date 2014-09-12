@@ -5,7 +5,7 @@
 (require 'f)
 (after-load 'f
   (unless (f-exists? "~/.emacs.d/.cache/")
-    (f-mkdir ".cache")))
+    (f-mkdir "~/.emacs.d/.cache/")))
 
 (defcustom dotemacs-cache-directory (concat user-emacs-directory ".cache/")
   "The storage location for various persistent files.")

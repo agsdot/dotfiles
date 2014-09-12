@@ -3,13 +3,11 @@
 #     source ~/.bash_aliases
 # fi
 
-alias vi='vim'
-alias startx='ssh-agent startx'
-alias ls='ls -a'
-alias q='exit'
 alias c='clear'
 alias g='git'
+alias q='exit'
 alias rm='rm -rf'
+alias vi='vim'
 export EDITOR="vim"
 
 ## use emacs key bindings like ctrl-r to search backwards in history
@@ -26,8 +24,18 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='mac'
 fi
 
-#if [[ $platform == 'linux' ]]; then
-   #alias ls='ls -a'
-#elif [[ $platform == 'mac' ]]; then
-   #alias ls='ls -a'
-#fi
+if [[ $platform == 'linux' ]]; then
+  alias ls='ls -aF'
+  alias emacs="emacs -nw" # to make sure that emacs would load in terminal and not gui app
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+  alias open="xdg-open"
+  alias startx='ssh-agent startx' # something to do with setup of a WM on Archlinux
+elif [[ $platform == 'mac' ]]; then
+  alias ls='ls -aFG'
+fi
+
+# source local bash alias mods custom to the individual computer
+if [ -f ~/.bash_aliases_local ]; then
+  source ~/.bash_aliases_local
+fi
