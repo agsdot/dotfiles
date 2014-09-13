@@ -4,8 +4,4 @@ vim/.netrwhist
 
 # Emacs related files
 elpa/
-projectile-bookmarks.eld
-*.dat
-auto-save-list/
-.emacs.desktop
 .cache/

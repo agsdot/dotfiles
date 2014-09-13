@@ -10,6 +10,7 @@
 (require 'neotree)
 
 (require 'smex) ; Not needed if you use package.el
+(setq smex-save-file (concat dotemacs-cache-directory "smex-items"))
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -18,6 +19,7 @@
 
 ;; fast file management
 (projectile-global-mode)
+(setq projectile-known-projects-file (concat dotemacs-cache-directory "projectile-bookmarks.eld"))
 
 ;; ido mode configs
 (require 'ido)

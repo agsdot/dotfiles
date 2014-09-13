@@ -6,7 +6,6 @@
 alias c='clear'
 alias g='git'
 alias q='exit'
-alias rm='rm -rf'
 alias vi='vim'
 export EDITOR="vim"
 

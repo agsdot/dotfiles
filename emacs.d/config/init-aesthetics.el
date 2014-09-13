@@ -1,4 +1,3 @@
-(require-package 'color-theme)
 (require-package 'base16-theme)
 (require-package 'color-theme-sanityinc-tomorrow)
 (require-package 'monokai-theme)
@@ -29,9 +28,10 @@
       '((space-mark 32 [183] [46])
         (tab-mark 9 [9655 9] [92 9])))
 
-; (load-theme 'sanityinc-tomorrow-eighties t)
-(load "tomorrow-night-eighties-theme.el")
-(require 'tomorrow-night-eighties-theme)
+;; (load-theme 'sanityinc-tomorrow-eighties t)
+;; (load "tomorrow-night-eighties-theme.el")
+;; (require 'tomorrow-night-eighties-theme)
+(require 'zenburn-theme)
 
 ;;;;;;;;;;
 (provide 'init-aesthetics)

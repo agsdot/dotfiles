@@ -16,14 +16,21 @@
 ;; menu bar visibility
 (menu-bar-mode -1)
 
-;; Disable the creation of backup files.
-(setq backup-inhibited t)
-(setq make-backup-files nil)
-(setq auto-save-default nil)
+;; Backup Files location
+;; https://github.com/bling/dotemacs/blob/master/config/init-core.el
+(setq backup-directory-alist
+  `((".*" . ,(concat dotemacs-cache-directory "backups")))
+  auto-save-file-name-transforms
+  `((".*" ,(concat dotemacs-cache-directory "backups") t))
+  auto-save-list-file-prefix
+  (concat dotemacs-cache-directory "auto-save-list/saves-"))
 
 ;; Emacs: reopen buffers from last session on startup?
 ;; http://stackoverflow.com/a/803828/2741455
 (desktop-save-mode 1)
+;; Some emacs desktop-save questions: how to change it to save in ~/.emacs.d/.emacs.desktop
+;; http://stackoverflow.com/a/4485083/2741455
+(setq desktop-path (list dotemacs-cache-directory))
 
 ;; Closing all other buffers in Emacs
 ;; http://stackoverflow.com/a/3417473/2741455
