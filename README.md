@@ -11,10 +11,8 @@ Instructions, clone the project.
 - Run the setupGitconfig.sh script  
 - Run the setupVim.sh script  
 
-http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/  
-
-http://joncairns.com/2011/10/how-to-use-git-submodules/  
+The following links helped in the setup of these dotfiles:  
+  - http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/  
+  - http://joncairns.com/2011/10/how-to-use-git-submodules/  
 
 P.s. Super impressed by the power of git clone --recursive.  Wow/whoa, when sourcing submodules that have submodules themselves, the recursive command takes care of that whole inception stuff.  Wow!  
-
-P.s.s. Just added the third step for submodule update init remote, because I wanted to make sure that neotree was on the correct branch (dev vs master). This command kinda negates the need for the recursive in the first command--I don't have any projects right now with deep nesting of submodules. But I'm am leaving it as a precautionary measure for the future submodules if they have dependencies as such. Super props to this [SO article](http://stackoverflow.com/a/20016830/2741455).  

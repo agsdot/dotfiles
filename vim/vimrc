@@ -83,7 +83,7 @@ set smarttab
 set noeb vb t_vb=
 
 syntax on
-colorscheme Tomorrow-Night-Eighties
+colorscheme zenburn "Tomorrow-Night-Eighties
 
 " For nerdtree
 let NERDTreeShowHidden=1

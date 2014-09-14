@@ -2,13 +2,13 @@
 (require-package 'undo-tree)
 (require-package 'hungry-delete)
 
-(require 'f)
-(after-load 'f
-  (unless (f-exists? "~/.emacs.d/.cache/")
-    (f-mkdir "~/.emacs.d/.cache/")))
-
 (defcustom dotemacs-cache-directory (concat user-emacs-directory ".cache/")
   "The storage location for various persistent files.")
+
+(require 'f)
+(after-load 'f
+  (unless (f-exists? dotemacs-cache-directory)
+    (f-mkdir dotemacs-cache-directory)))
 
 ;; Dont display logo at startup
 (setq inhibit-startup-message t)
