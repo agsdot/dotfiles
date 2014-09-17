@@ -17,7 +17,8 @@
 ;; Make Evil-Jumper jump list persist in between sessions by storing to a file
 (setq evil-jumper-auto-center t)
 (setq evil-jumper-file (concat dotemacs-cache-directory "evil-jumps"))
-(setq evil-jumper-auto-save-interval 10)
+(setq evil-jumper-auto-save-interval 120)
+(setq evil-jumper-max-length 10)
 (require 'evil-jumper)
 
 (require 'powerline-evil)
