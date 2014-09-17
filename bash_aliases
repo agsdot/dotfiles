@@ -9,6 +9,8 @@ alias ..2="cd ../.."
 alias ..3="cd ../../.."
 alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
+# https://superuser.com/questions/515565/how-to-create-alias-for-minus-sign
+alias -- -="cd -" # make it easier to go to the previous directory
 
 alias c='clear'
 alias g='git'
