@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Setup git configs, aliases, and eye candy"
+
 git config --global alias.co "checkout"
 git config --global alias.br "branch"
 git config --global alias.st "status -bs"
@@ -18,3 +20,4 @@ git config --global pretty.custom "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green
 
 git config --global core.excludesfile "~/.gitignore_global"
 
+echo "...done"
