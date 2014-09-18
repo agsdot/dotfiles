@@ -22,7 +22,6 @@ export EDITOR="vim"
 ## use emacs key bindings like ctrl-r to search backwards in history
 # https://github.com/nsanch/env/blob/master/bash_profile
 set -o emacs
-#alias ls='ls -a --color=auto -F'
 
 #https://stackoverflow.com/questions/394230/detect-the-os-from-a-bash-script
 platform='unknown'
@@ -34,12 +33,12 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
 fi
 
 if [[ $platform == 'linux' ]]; then
-  alias ls='ls -aF'
+  alias ls='ls -aF --auto'
   alias emacs="emacs -nw" # to make sure that emacs would load in terminal and not gui app
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
   alias open="xdg-open"
-  alias startx='ssh-agent startx' # something to do with setup of a WM on Archlinux
+  # alias startx='ssh-agent startx' # something to do with setup of a WM on Archlinux
 elif [[ $platform == 'mac' ]]; then
   alias ls='ls -aFG'
 fi
