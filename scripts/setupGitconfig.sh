@@ -20,4 +20,13 @@ git config --global pretty.custom "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green
 
 git config --global core.excludesfile "~/.gitignore_global"
 
+echo "Lastly, lets check to see if you've got git-webui installed"
+if [ ! -d ~/.git-webui ]; then
+  echo "Let's install it right now..."
+  curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash
+  echo "for more information on how to use it goto: https://github.com/alberthier/git-webui "
+else
+  echo "You've already got it installed..."
+fi
+
 echo "...done"
