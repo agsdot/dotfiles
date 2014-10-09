@@ -58,6 +58,7 @@
 ;; http://stackoverflow.com/a/15310340/2741455
 ;; How to set defcustom variable
 (after-load 'linum-relative
+  (setq linum-relative-format "%3s ")
   (setq linum-relative-current-symbol ""))
 
 ;;;;;;;;;;

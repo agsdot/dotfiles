@@ -5,7 +5,7 @@ Also, both vim and emacs are setup to use the ; semicolon instead of the : colon
 Open a terminal and do the following:  
 
 - git clone --recursive git@github.com:agsdot/dotfiles.git ~/dotfiles (Clone the project and all submodules)  
-- cd dotfiles  
+- cd ~/dotfiles  
 - git submodule update --init --remote (make sure that we are on the correct submodule branch)  
 - ./setup.sh (Run setup script, which initializes the setup files within the scripts directory)  
 

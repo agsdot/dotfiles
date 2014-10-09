@@ -5,7 +5,7 @@
 (require-package 'zenburn-theme)
 
 (require-package 'crosshairs)
-(require-package 'rainbow-delimiters)
+;; (require-package 'rainbow-delimiters)
 (require-package 'smartparens)
 
 (line-number-mode t)
@@ -15,8 +15,8 @@
 (require 'crosshairs)
 (toggle-crosshairs-when-idle 30)
 
-(require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode)
+;; (require 'rainbow-delimiters)
+;; (global-rainbow-delimiters-mode)
 
 (require 'smartparens-config)
 (smartparens-global-mode t)

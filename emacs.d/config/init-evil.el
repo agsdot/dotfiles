@@ -1,7 +1,8 @@
 (require-package 'evil)
-(require-package 'evil-matchit)
-(require-package 'powerline-evil)
 (require-package 'evil-jumper)
+(require-package 'evil-matchit)
+(require-package 'evil-numbers)
+(require-package 'powerline-evil)
 
 ;; vim navigation
 (require 'evil)
@@ -20,6 +21,10 @@
 (setq evil-jumper-auto-save-interval 120)
 (setq evil-jumper-max-length 10)
 (require 'evil-jumper)
+
+(require  'evil-numbers)
+(define-key evil-normal-state-map (kbd "C-a") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "C-S-a") 'evil-numbers/dec-at-pt)
 
 (require 'powerline-evil)
 (powerline-evil-vim-theme)
