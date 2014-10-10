@@ -23,7 +23,7 @@ NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'bling/vim-airline'
 
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -116,6 +116,7 @@ set viminfo='1000,\"1000,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 let g:ctrlp_show_hidden = 1
+set wildignore+=*.class
 
 set paste
 
