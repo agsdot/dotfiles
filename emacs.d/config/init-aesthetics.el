@@ -22,7 +22,7 @@
 (smartparens-global-mode t)
 
 (require 'whitespace)
-(global-whitespace-mode)
+;; (global-whitespace-mode)
 (setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
 (setq whitespace-display-mappings
       '((space-mark 32 [183] [46])

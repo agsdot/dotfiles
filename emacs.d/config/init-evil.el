@@ -4,7 +4,9 @@
 (require-package 'evil-numbers)
 (require-package 'powerline-evil)
 
-;; vim navigation
+;; https://stackoverflow.com/questions/14302171/ctrl-u-in-emacs-when-using-evil-key-bindings
+(setq evil-want-C-u-scroll t)
+;; vim modal navigation
 (require 'evil)
 (defalias 'em 'evil-mode)
 (evil-mode 1)
