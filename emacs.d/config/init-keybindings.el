@@ -44,9 +44,19 @@
   "p" 'projectile-find-file
   "r" 'recentf-open-files
   "/" 'evilnc-comment-or-uncomment-lines
-  "<down>" 'drag-stuff-down
-  "<up>" 'drag-stuff-up
+  ;; "<down>" 'drag-stuff-down
+  ;; "<up>" 'drag-stuff-up
 )
+
+;; To do a multiple line select and drag up/down
+;; Do a total line select, with Capital V, and make sure
+;; that the cursor is in the upper left corner of the region
+;; then proceed to ctrl up/down the region
+;; (the above instructions preclude some odd behavior from
+;; happening for a multiselect drag up/down, whereas
+;; single line movement is just fine)
+(define-key evil-normal-state-map (kbd "C-<down>") 'drag-stuff-down)
+(define-key evil-normal-state-map (kbd "C-<up>") 'drag-stuff-up)
 
 (define-key evil-normal-state-map ":" 'smex)
 
