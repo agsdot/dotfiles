@@ -48,6 +48,12 @@ elif [[ $platform == 'mac' ]]; then
   alias ls='ls -aFG'
 fi
 
+# https://unix.stackexchange.com/questions/10689/how-can-i-tell-if-im-in-a-tmux-session-from-a-bash-script
+if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+  # http://askubuntu.com/questions/125526/vim-in-tmux-display-wrong-colors
+  alias vim="TERM=screen-256color vim"
+fi
+
 # source local bash alias mods custom to the individual computer
 if [ -f ~/.bash_aliases_local ]; then
   source ~/.bash_aliases_local
