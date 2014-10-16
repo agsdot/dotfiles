@@ -14,10 +14,15 @@ alias -- -="cd -" # make it easier to go to the previous directory
 
 alias c='clear'
 alias g='git'
+alias gbr="git br"
+alias gst="git st"
 alias p='pwd -P'
 alias q='exit'
 alias vi='vim'
 export EDITOR="vim"
+
+# http://stackoverflow.com/questions/831681/how-to-display-line-numbers-in-less-gnu
+export LESS='-RS#3NM~g'
 
 ## use emacs key bindings like ctrl-r to search backwards in history
 # https://github.com/nsanch/env/blob/master/bash_profile
