@@ -25,8 +25,8 @@
 (require 'evil-jumper)
 
 (require  'evil-numbers)
-(define-key evil-normal-state-map (kbd "C-w") 'evil-numbers/inc-at-pt)
-(define-key evil-normal-state-map (kbd "C-q") 'evil-numbers/dec-at-pt)
+(define-key evil-normal-state-map (kbd "C-<right>") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "C-<left>") 'evil-numbers/dec-at-pt)
 
 (require 'powerline-evil)
 (powerline-evil-vim-theme)
