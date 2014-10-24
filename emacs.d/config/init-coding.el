@@ -1,6 +1,5 @@
 (require-package 'company)
 (require-package 'drag-stuff)
-(require-package 'evil-nerd-commenter)
 (require-package 'git-gutter)
 (require-package 'git-timemachine)
 (require-package 'groovy-mode)
@@ -25,9 +24,6 @@
   (interactive)
   (kill-buffer)
   (jump-to-register :magit-fullscreen))
-
-;; enable evil nerd commenter commenting, works in emacs mode and vim/evil mode
-(evilnc-default-hotkeys)
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))

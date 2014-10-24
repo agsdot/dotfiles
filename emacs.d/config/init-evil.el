@@ -1,6 +1,7 @@
 (require-package 'evil)
 (require-package 'evil-jumper)
 (require-package 'evil-matchit)
+(require-package 'evil-nerd-commenter)
 (require-package 'evil-numbers)
 (require-package 'powerline-evil)
 
@@ -23,6 +24,10 @@
 (setq evil-jumper-auto-save-interval 120)
 (setq evil-jumper-max-length 10)
 (require 'evil-jumper)
+
+;; enable evil nerd commenter commenting, works in emacs mode and vim/evil mode
+(require 'evil-nerd-commenter)
+(evilnc-default-hotkeys)
 
 (require  'evil-numbers)
 (define-key evil-normal-state-map (kbd "C-<right>") 'evil-numbers/inc-at-pt)

@@ -4,7 +4,7 @@
 (require-package 'solarized-theme)
 (require-package 'zenburn-theme)
 
-(require-package 'crosshairs)
+;; (require-package 'crosshairs)
 ;; (require-package 'rainbow-delimiters)
 (require-package 'smartparens)
 
@@ -12,8 +12,8 @@
 (column-number-mode t)
 (global-linum-mode t)
 
-(require 'crosshairs)
-(toggle-crosshairs-when-idle 30)
+;; (require 'crosshairs)
+;; (toggle-crosshairs-when-idle 30)
 
 ;; (require 'rainbow-delimiters)
 ;; (global-rainbow-delimiters-mode)
