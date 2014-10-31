@@ -60,6 +60,20 @@
 
 (define-key evil-normal-state-map ":" 'smex)
 
+;; Bind DEL and = keys to scrolling up and down
+;; https://stackoverflow.com/questions/8483182/evil-mode-best-practice
+(define-key evil-normal-state-map (kbd "DEL") (lambda ()
+                    (interactive)
+                    (previous-line 10)
+                    (evil-scroll-line-up 10)
+                    ))
+
+(define-key evil-normal-state-map (kbd "=") (lambda ()
+                      (interactive)
+                      (next-line 10)
+                      (evil-scroll-line-down 10)
+                      ))
+
 ;; press k j in rapid succesion to escape
 ;; http://stackoverflow.com/questions/10569165/how-to-map-jj-to-esc-in-emacs-evil-mode
 (define-key evil-insert-state-map "k" #'cofi/maybe-exit)
