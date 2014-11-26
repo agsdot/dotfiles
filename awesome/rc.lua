@@ -84,7 +84,7 @@ end
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
-   names = {"EDITOR", "WORK WEB", "WORK TERMINAL", "GIT","OTHER", "OTHER","FAH","MEDIA", "PERSONAL"}
+   names = {"EDITOR", "WEB RESEARCH", "WEB DEV", "GIT", "OTHER","EMAIL", "OTHER","MEDIA", "PERSONAL"}
 }
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
@@ -220,6 +220,16 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+
+   --http://awesome.naquadah.org/wiki/Screenshots
+   -- bind PrintScrn to capture a screen
+    --awful.key({ modkey,           },"q", function() awful.util.spawn("capscr",false) end),
+--http://stackoverflow.com/questions/14273607/how-to-run-a-bash-with-shortcut-on-awesome-wm
+    --awful.key({ modkey,           },"q", function() awful.util.spawn("sh ~/.userScripts/capscr") end),
+    awful.key({           },"Print", function() awful.util.spawn_with_shell("~/.userScripts/capscr") end),
+--Look at these two links later to spruce stuff up.
+--http://stackoverflow.com/questions/14273607/how-to-run-a-bash-with-shortcut-on-awesome-wm
+--http://www.andrew.cmu.edu/user/rdmarsh/awesome/rc.lua
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),

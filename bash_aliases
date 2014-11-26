@@ -55,7 +55,7 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
 fi
 
 # have a path for small user scripts to run and execute in the shell
-if [ -f ~/.userScripts ]; then
+if [ -d ~/.userScripts ]; then
   export PATH="$PATH:$HOME/.userScripts"
 fi
 
