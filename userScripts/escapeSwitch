@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# for switching the capslock and escape key in linux
+/usr/bin/setxkbmap -option "caps:swapescape"

@@ -54,6 +54,11 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
   alias vim="TERM=screen-256color vim"
 fi
 
+# have a path for small user scripts to run and execute in the shell
+if [ -f ~/.userScripts ]; then
+  export PATH="$PATH:$HOME/.userScripts"
+fi
+
 # source local bash alias mods custom to the individual computer
 if [ -f ~/.bash_aliases_local ]; then
   source ~/.bash_aliases_local

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# for making printscreens in Awesome WM
+timestamp="$(date +%Y%m%d%H%M%S)"
+targetbase="$HOME/capscr"
+mkdir -p $targetbase
+[ -d $targetbase ] || exit 1
+import -window root $targetbase/$timestamp.png
