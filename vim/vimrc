@@ -1,5 +1,11 @@
 set shell=/bin/bash
 "NeoBundle Scripts-----------------------------
+" Automatically setup NeoBundle on first run
+if !isdirectory(expand("~/.vim/bundle/neobundle.vim"))
+  echo "\nSourcing NeoBundle and going online to do a git clone. Wait a second or two...\n"
+  call system("git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+endif
+
 if has('vim_starting')
   set nocompatible               " Be iMproved
 
