@@ -40,6 +40,10 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
+" Move cursor by line naturally with k and j in navigation mode.
+nnoremap j gj
+nnoremap k gk
+
 let mapleader = ","
 
 " Don't automatically add newline to end of file
