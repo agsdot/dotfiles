@@ -1,66 +1,38 @@
 set shell=/bin/bash
-"NeoBundle Scripts-----------------------------
-" Automatically setup NeoBundle on first run
-if !isdirectory(expand("~/.vim/bundle/neobundle.vim"))
-  echo "\nSourcing NeoBundle and going online to do a git clone. Wait a second or two...\n"
-  call system("git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
-endif
-
 if has('vim_starting')
-  set nocompatible               " Be iMproved
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set nocompatible
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle'))
+if empty(glob('~/.vim/autoload/plug.vim'))
+  "https://www.reddit.com/r/vim/comments/2tcm94/one_liner_to_bootstrap_vimplug/
+  sil !wget -nc -q github.com/junegunn/vim-plug/raw/master/plug.vim -P ~/.vim/autoload/
+  autocmd VimEnter * PlugInstall
+endif
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call plug#begin()
 
-" My Bundles here:
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-    \ 'build' : {
-    \     'windows' : 'make -f make_mingw32.mak',
-    \     'cygwin' : 'make -f make_cygwin.mak',
-    \     'mac' : 'make -f make_mac.mak',
-    \     'unix' : 'make -f make_unix.mak',
-    \    }
-    \ }
-NeoBundle 'Shougo/vimshell.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'bitc/vim-bad-whitespace'
+Plug 'bling/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'flazz/vim-colorschemes'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'mhinz/vim-startify'
+Plug 'myusuf3/numbers.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'Shougo/vimshell.vim'
+Plug 'Shougo/unite.vim'
+Plug 'terryma/vim-expand-region'
+Plug 'terryma/vim-smooth-scroll'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
-NeoBundle 'bling/vim-airline'
-
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Xuyuanp/nerdtree-git-plugin'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'sheerun/vim-polyglot'
-NeoBundle 'myusuf3/numbers.vim'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'bitc/vim-bad-whitespace'
-NeoBundle 'mhinz/vim-startify'
-NeoBundle 'terryma/vim-smooth-scroll'
-NeoBundle 'terryma/vim-expand-region'
-
-" Required:
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
-"
+call plug#end()
 
 " Switch colon and semi-colon
 nnoremap ; :

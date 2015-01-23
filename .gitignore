@@ -1,6 +1,8 @@
 # Vim related files
 bundle/
 vim/.netrwhist
+plugged/
+autoload/
 
 # Emacs related files
 elpa/
