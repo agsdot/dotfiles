@@ -3,7 +3,11 @@ if has('vim_starting')
   set nocompatible
 endif
 
-if empty(glob('~/.vim/autoload/plug.vim'))
+let statusPluginDirectory=system("if find ~/.vim/plugged/ -maxdepth 0 -empty | read v; then echo -n 'Empty dir'; fi")
+if empty(glob('~/.vim/autoload/plug.vim')) || empty(glob('~/.vim/plugged/')) || statusPluginDirectory == "Empty dir"
+  " Scenarios 1) the plug.vim script is not present,
+  "           2) the plugged directory is not present,
+  "           3) the plugged directory is present but empty (no files/directories within)
   "https://www.reddit.com/r/vim/comments/2tcm94/one_liner_to_bootstrap_vimplug/
   sil !wget -nc -q github.com/junegunn/vim-plug/raw/master/plug.vim -P ~/.vim/autoload/
   autocmd VimEnter * PlugInstall
